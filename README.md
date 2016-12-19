@@ -590,6 +590,8 @@ At first, you use `require.ensure` to define a split point. ([official document]
 
 ```javascript
 // main.js
+// 第一个参数是依赖列表，webpack会加载模块，但不会执行
+// 第二个参数是一个回调，在其中可以使用require载入模块
 require.ensure(['./a'], function(require) {
   var content = require('./a');
   document.open();
